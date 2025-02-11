@@ -1,0 +1,68 @@
+.homeContainer {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: "Barlow Condensed", serif;
+}
+
+.spaceContainer {
+    margin: 15% 15% 0;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+}
+
+.spaceTxt {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.exploreBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13vw;
+    height: 13vw;
+    max-width: 250px;
+    max-height: 250px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-family: "Bellefair";
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.exploreBtn:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.hoverExplore {
+    border-radius: 50%;
+    padding: 4vw;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.hoverExplore:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.title {
+    font-size: 7vw;
+    letter-spacing: 0.5vw;
+    font-family: "Bellefair";
+    font-weight: 100;
+}
+
+.subTitle {
+    font-size: 1.5vw;
+    color: #D0D6F9;
+}

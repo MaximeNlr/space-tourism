@@ -1,0 +1,73 @@
+.technoContainer {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100vh;
+    color: #D0D6F9;
+    font-family: "Barlow Condensed", serif;
+}
+
+.techContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 16vh;
+}
+
+.technoImg img {
+    width: 70vh;
+}
+
+.navTechno {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    margin-right: 5vh;
+}
+
+.technoLink div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 8vh;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.technoLink div:hover {
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.technoLink div.active {
+    background-color: white;
+    color: black;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+}
+
+.aboutTechno {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 50vh;
+    margin-right: 10vh;
+}
+
+.aboutTechno h2 {
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: "Bellefair";
+}
+
+.aboutTechno h3 {
+    font-weight: 100;
+    font-size: 3.5rem;
+    font-family: "Bellefair";
+}
