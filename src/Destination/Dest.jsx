@@ -2,6 +2,7 @@ import "../Destination/Dest.css";
 import { useEffect, useState } from "react";
 import Assets from "../assets/Assets";
 import Header from "../Components/Header/Header";
+import MobileHeader from "../Components/Mobile_Header/MobileHeader";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Dest() {
@@ -51,7 +52,12 @@ export default function Dest() {
     }
     return (
         <section className="destContainer">
-            <Header />
+            <div className="normalHeader">
+                <Header />
+            </div>
+            <div className="headerMobile">
+                <MobileHeader />
+            </div>
             <h1 className="allTitle"><span className="titleSpan">01</span> PICK YOUR DESTINATION</h1>
             <div className="planetContainer">
                 <div className="planetImg">

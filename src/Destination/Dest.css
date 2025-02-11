@@ -18,12 +18,12 @@
 .planetHeader {
     display: flex;
     gap: 2vw;
-    font-size: 1.125rem;
+    font-size: 1rem;
     max-height: 26px;
 }
 
 .planetContainer h2 {
-    font-size: 6vw;
+    font-size: 5rem;
     letter-spacing: 0.5vw;
     font-family: "Bellefair";
     font-weight: 100;
@@ -45,7 +45,7 @@
 .headerLink p {
     margin: 0;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
 }
@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: "Barlow", serif;
     width: 40%;
 }
@@ -81,14 +81,78 @@
 .planetInfo {
     display: flex;
     gap: 5vw;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .planetInfo p {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .planetImg img {
-    width: 55vh;
+    width: 45vh;
     object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+
+    .destContainer {
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
+    }
+
+    .planetContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 3vh 3vw 0;
+        text-align: center;
+    }
+
+    .planetImg img {
+        width: 20vh;
+        margin-bottom: 5vh;
+    }
+
+    .planetTxt {
+        width: 90%;
+        margin: auto;
+    }
+
+    .planetContainer h2 {
+        max-width: 100%;
+        font-size: 4rem;
+        margin: 2vh 0;
+    }
+
+    .planetAbout {
+        width: 100%;
+    }
+
+    .planetHeader {
+        margin: auto;
+        gap: 10vw;
+    }
+
+    .borderPlanet {
+        margin: 2vh auto;
+    }
+
+    .planetInfo {
+        justify-content: center;
+        margin-bottom: 2vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .borderPlanet {
+        margin: 4vh auto 2vh;
+    }
+
+    .planetContainer h2 {
+        margin: 1vh 0;
+    }
+
+    .destContainer h1 {
+        letter-spacing: 1;
+    }
 }

@@ -1,5 +1,7 @@
 const ASSETS = {
     logo_header: new URL('./shared/logo.svg', import.meta.url).href,
+    mobileNavLogo: new URL('./shared/icon-hamburger.svg', import.meta.url).href,
+    mobileClose: new URL('./shared/icon-close.svg', import.meta.url).href,
     moonImg: new URL('./destination/image-moon.png', import.meta.url).href,
     marsImg: new URL('./destination/image-mars.png', import.meta.url).href,
     europaImg: new URL('./destination/image-europa.png', import.meta.url).href,

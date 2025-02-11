@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    color: #D0D6F9;
     font-family: "Barlow Condensed", serif;
 }
 
@@ -10,9 +11,13 @@
     border-radius: 50%;
     height: 1vh;
     width: 1vh;
-    background-color: white;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.309);
     transition: background-color 0.2s ease-in-out;
+}
+
+.memberLink.active {
+    background-color: white;
 }
 
 .memberLink:hover {
@@ -23,7 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     margin-top: 5vh;
     margin-bottom: 7vh;
 }
@@ -33,8 +37,7 @@
     flex-direction: column;
     gap: 5vh;
     max-width: 37%;
-    height: 553px;
-    padding-top: 5vw;
+    padding-top: 5vh;
 }
 
 .memberAbout {
@@ -47,7 +50,7 @@
 }
 
 .memberTxt h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "Bellefair";
     font-weight: 100;
     opacity: 0.5;
@@ -55,7 +58,7 @@
 }
 
 .memberTxt h3 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Bellefair";
     font-weight: 100;
     margin-bottom: 2vh;
@@ -64,14 +67,60 @@
 
 .crewNav {
     display: flex;
-    margin-top: 15vh;
     gap: 2vw;
 }
 
 .crewImg img {
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0) 100%);
-    height: 700px;
-    width: 650px;
+    max-height: 65vh;
+    width: 35vw;
     object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+
+    .crewContainer {
+        background-image: url(../assets/crew/background-crew-mobile.jpg);
+    }
+
+
+    .crewContainer h1 {
+        margin-bottom: 1vh;
+    }
+
+    .membersContainer {
+        flex-direction: column;
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .memberTxt {
+        max-width: 90%;
+        gap: 0;
+    }
+
+    .memberTxt h2 {
+        font-size: 1.2rem;
+        margin-bottom: 2vh;
+    }
+
+    .memberTxt h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2vh;
+
+    }
+
+    .crewNav {
+        justify-content: center;
+        gap: 6vw;
+        margin-bottom: 5vh;
+        margin-top: 2vh;
+    }
+
+    .crewImg img {
+        max-height: 95vh;
+        width: 65vw;
+    }
 }

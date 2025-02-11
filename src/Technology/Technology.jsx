@@ -1,6 +1,7 @@
 import "../Technology/Technology.css";
 import { useState, useEffect } from "react";
 import Header from "../Components/Header/Header";
+import MobileHeader from "../Components/Mobile_Header/MobileHeader";
 import Assets from "../assets/Assets";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -45,7 +46,12 @@ export default function Technology() {
 
     return (
         <section className="technoContainer">
-            <Header />
+            <div className="normalHeader">
+                <Header />
+            </div>
+            <div className="headerMobile">
+                <MobileHeader />
+            </div>
             <h1 className="allTitle"><span className="titleSpan">03</span> SPACE LAUNCH 101</h1>
             <div className="techContainer">
                 <div className="techNav">
@@ -61,22 +67,21 @@ export default function Technology() {
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className="aboutTechno">
-                    <h2>THE TERMINOLOGY...</h2>
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={`tech-${selectedTechno}`}
-                            initial={{ opacity: 0.4 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <h3>{techno[selectedTechno].secondTitle}</h3>
-                            <p id="txt18">{techno[selectedTechno].about}</p>
-                        </motion.div>
-                    </AnimatePresence>
-
+                    <div className="aboutTechno">
+                        <h2>THE TERMINOLOGY...</h2>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={`tech-${selectedTechno}`}
+                                initial={{ opacity: 0.4 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <h3>{techno[selectedTechno].secondTitle}</h3>
+                                <p id="txt18">{techno[selectedTechno].about}</p>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
                 <div className="technoImg">
                     <AnimatePresence mode="wait">

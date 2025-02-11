@@ -2,6 +2,7 @@ import "../Crew/Crew.css";
 import { useState, useEffect } from "react";
 import Assets from "../assets/Assets";
 import Header from "../Components/Header/Header";
+import MobileHeader from "../Components/Mobile_Header/MobileHeader";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Crew() {
@@ -51,7 +52,12 @@ export default function Crew() {
 
     return (
         <section className="crewContainer">
-            <Header />
+            <div className="normalHeader">
+                <Header />
+            </div>
+            <div className="headerMobile">
+                <MobileHeader />
+            </div>
             <h1 className="allTitle"><span className="titleSpan">02</span> MEET YOUR CREW</h1>
             <div className="membersContainer">
                 <div className="memberTxt">

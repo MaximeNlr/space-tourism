@@ -1,7 +1,7 @@
 .technoContainer {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     height: 100vh;
     color: #D0D6F9;
     font-family: "Barlow Condensed", serif;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-left: 16vh;
+    margin-left: 16vw;
 }
 
 .technoImg img {
@@ -25,6 +25,10 @@
     margin-right: 5vh;
 }
 
+.techNav {
+    display: flex;
+}
+
 .technoLink div {
     display: flex;
     align-items: center;
@@ -33,7 +37,7 @@
     width: 8vh;
     border: 1px solid rgba(255, 255, 255, 0.418);
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1.7rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -55,19 +59,81 @@
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    width: 50vh;
+    width: 70%;
     margin-right: 10vh;
 }
 
 .aboutTechno h2 {
     opacity: 0.5;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Bellefair";
 }
 
 .aboutTechno h3 {
     font-weight: 100;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: "Bellefair";
+    margin-bottom: 2vh;
+}
+
+@media screen and (max-width: 480px) {
+
+    .techContainer {
+        background-image: url(../assets/technology/background-technology-mobile.jpg);
+        flex-direction: column-reverse;
+        margin: 0;
+        text-align: center;
+    }
+
+    .techNav {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .navTechno {
+        margin-right: 0;
+    }
+
+    .aboutTechno {
+        margin-right: 0;
+    }
+
+    .navTechno {
+        flex-direction: row;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .technoImg {
+        width: 100%;
+    }
+
+    .technoImg img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .technoLink div {
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .technoLink div.active {
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .aboutTechno {
+        width: 90%;
+    }
+
+    .aboutTechno h2 {
+        font-size: 1.2rem;
+    }
+
+    .aboutTechno h3 {
+        font-size: 2rem;
+    }
 }

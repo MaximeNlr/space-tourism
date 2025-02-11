@@ -1,0 +1,60 @@
+.mobileLogo img {
+    object-fit: contain;
+}
+
+.mobileLogo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh 5vw;
+}
+
+.mobileHeader nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding-right: 10vw;
+    text-align: left;
+    padding-left: 5vw;
+    padding-top: 10vh;
+}
+
+.mobileHeader img {
+    margin-top: 3vh;
+    position: relative;
+    left: 40%;
+}
+
+.mobileHeader a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Barlow Condensed", serif;
+}
+
+.mobileHeader {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 60%;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.1);
+    /* Fond semi-transparent */
+    backdrop-filter: blur(40px);
+    /* Applique un flou */
+    height: 100vh;
+    z-index: 1;
+}
+
+.mobileHeader.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
