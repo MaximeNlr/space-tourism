@@ -13,6 +13,10 @@ const ASSETS = {
     launch: new URL('./technology/image-launch-vehicle-portrait.jpg', import.meta.url).href,
     spaceport: new URL('./technology/image-spaceport-portrait.jpg', import.meta.url).href,
     capsule: new URL('./technology/image-space-capsule-portrait.jpg', import.meta.url).href,
+    launchLand: new URL('./technology/image-launch-vehicle-landscape.jpg', import.meta.url).href,
+    spaceportLand: new URL('./technology/image-spaceport-landscape.jpg', import.meta.url).href,
+    capsuleLand: new URL('./technology/image-space-capsule-landscape.jpg', import.meta.url).href,
+
 }
 
 export default ASSETS;

@@ -1,3 +1,8 @@
+.mobileHeaderContainer {
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
 .mobileLogo img {
     object-fit: contain;
 }
@@ -8,14 +13,33 @@
     padding: 2vh 5vw;
 }
 
+.navLinkMobile {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+}
+
 .mobileHeader nav {
     display: flex;
     flex-direction: column;
     gap: 5vh;
     padding-right: 10vw;
     text-align: left;
-    padding-left: 5vw;
+    padding-left: 10vw;
     padding-top: 10vh;
+}
+
+.navLinkMobile.active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 2vh;
+    width: 4px;
+    background-color: white;
 }
 
 .mobileHeader img {
@@ -32,27 +56,30 @@
 }
 
 .mobileHeader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 40%;
     width: 60%;
     text-align: center;
-    transform: translateY(-100%);
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     opacity: 0;
     pointer-events: none;
     background: rgba(0, 0, 0, 0.1);
-    /* Fond semi-transparent */
     backdrop-filter: blur(40px);
-    /* Applique un flou */
     height: 100vh;
     z-index: 1;
 }
 
 .mobileHeader.open {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+}
+
+.delete-icon {
+    margin-right: 2vh;
+    margin-top: 2vh;
 }
 
 .menu-icon {

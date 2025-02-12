@@ -2,8 +2,9 @@
     background-image: url(../assets/destination/background-destination-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
-    color: #D0D6F9;
+    color: #ffffff;
     font-family: "Barlow Condensed", serif;
 }
 
@@ -20,6 +21,8 @@
     gap: 2vw;
     font-size: 1rem;
     max-height: 26px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
 }
 
 .planetContainer h2 {
@@ -48,6 +51,7 @@
     font-size: 0.8rem;
     padding-bottom: 5px;
     border-bottom: 1px solid transparent;
+    color: #D0D6F9;
 }
 
 .headerLink p.active {
@@ -85,6 +89,7 @@
 }
 
 .planetInfo p {
+    color: #D0D6F9;
     font-size: 0.8rem;
 }
 
@@ -93,7 +98,7 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
     .destContainer {
         background-image: url(../assets/destination/background-destination-mobile.jpg);
@@ -109,7 +114,7 @@
 
     .planetImg img {
         width: 20vh;
-        margin-bottom: 5vh;
+        margin-bottom: 2vh;
     }
 
     .planetTxt {
@@ -140,19 +145,80 @@
         justify-content: center;
         margin-bottom: 2vh;
     }
+
+    .headerLink:hover {
+        border-bottom: none;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 601px) and (max-width: 1180px) {
 
-    .borderPlanet {
-        margin: 4vh auto 2vh;
+    .destContainer {
+        background-image: url(../assets/destination/background-destination-tablet.jpg);
+        height: 100vh;
+        max-height: 100%;
+    }
+
+    .planetContainer {
+        flex-direction: column;
+        align-items: center;
+        margin: 6vh 3vw 0;
+        text-align: center;
     }
 
     .planetContainer h2 {
-        margin: 1vh 0;
+        font-size: 7rem;
+        max-width: 100%;
+
     }
 
-    .destContainer h1 {
-        letter-spacing: 1;
+    .planetContainer h3 {
+        margin-top: 1vh;
+    }
+
+    .planetImg img {
+        width: 85%;
+    }
+
+    .planetTxt h2 {
+        margin: 1vh auto;
+    }
+
+    .planetHeader {
+        justify-content: center;
+        max-height: 30px;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .headerLink p {
+        font-size: 1.5rem;
+    }
+
+    .planetTxt {
+        width: 100%;
+    }
+
+    .planetAbout {
+        text-align: center;
+        margin: auto;
+    }
+
+    .borderPlanet {
+        margin: 3vh auto 2vh;
+    }
+
+    .planetInfo {
+        justify-content: center;
+        gap: 30vw;
+        font-size: 2rem;
+    }
+
+    .planetInfo p {
+        font-size: 1.3rem;
+    }
+
+    .headerLink:hover {
+        border-bottom: none;
     }
 }

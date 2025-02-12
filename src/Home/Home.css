@@ -67,7 +67,7 @@
     color: #D0D6F9;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
     .title {
         margin: 3vh 0;
@@ -85,6 +85,33 @@
     .exploreBtn {
         width: 150px;
         height: 150px;
+    }
+}
 
+@media screen and (min-width: 601px) and (max-width: 1180px) {
+
+
+    .homeContainer {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 12rem;
+    }
+
+    .spaceContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subTitle {
+        font-size: 2.5rem;
+    }
+
+    .exploreBtn {
+        width: 600px;
+        height: 600px;
     }
 }

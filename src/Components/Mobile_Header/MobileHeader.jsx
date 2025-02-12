@@ -23,32 +23,33 @@ export default function MobileHeader() {
             <div className={`mobileHeader ${menuOpen ? "open" : ""}`}>
                 <img
                     src={Assets.mobileClose} alt=""
+                    className="delete-icon"
                     onClick={() => setMenuOpen(false)}
                 />
                 <nav>
                     <NavLink
                         to="/"
-                        className={`nav-link-mobile ${location.pathname === "/" ? "active" : ""}`}
+                        className={`navLinkMobile ${location.pathname === "/" ? "active" : ""}`}
                     >
-                        00 HOME
+                        <span className="numbersHeader">00</span> HOME
                     </NavLink>
                     <NavLink
                         to="/Destination"
-                        className={`nav-link-mobile ${location.pathname === "/Destination" ? "active" : ""}`}
+                        className={`navLinkMobile ${location.pathname === "/Destination" ? "active" : ""}`}
                     >
-                        01 DESTINATION
+                        <span className="numbersHeader">01</span> DESTINATION
                     </NavLink>
                     <NavLink
                         to="/Crew"
-                        className={`nav-link-mobile ${location.pathname === "/Crew" ? "active" : ""}`}
+                        className={`navLinkMobile ${location.pathname === "/Crew" ? "active" : ""}`}
                     >
-                        02 CREW
+                        <span className="numbersHeader">02</span> CREW
                     </NavLink>
                     <NavLink
                         to="/Technology"
-                        className={`nav-link-mobile ${location.pathname === "/Technology" ? "active" : ""}`}
+                        className={`navLinkMobile ${location.pathname === "/Technology" ? "active" : ""}`}
                     >
-                        03 TECHNOLOGY
+                        <span className="numbersHeader">03</span> TECHNOLOGY
                     </NavLink>
                 </nav>
             </div>

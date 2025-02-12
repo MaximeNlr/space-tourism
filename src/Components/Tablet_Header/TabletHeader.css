@@ -1,16 +1,15 @@
-.headerContainer {
+.tabletHeaderContainer {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    height: 8vh;
+    height: 6.5vh;
     align-items: center;
-    padding-top: 5vh;
     font-family: "Barlow Condensed", serif;
     font-weight: 100;
     letter-spacing: 2px;
 }
 
-.headerContainer nav {
+.tabletHeaderContainer nav {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -18,45 +17,35 @@
     padding-right: 3vw;
     align-items: center;
     background-color: #4a4b553c;
-    width: 50%;
     backdrop-filter: blur(10px);
+    width: 75%;
 }
 
-.navLink {
+.tabletNavLink {
     text-decoration: none;
     color: black;
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 0.5em 1em;
     position: relative;
 }
 
-.navLink.active::after {
+.tabletNavLink.active::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -1.8vh;
+    bottom: -1.7vh;
     width: 100%;
     height: 2px;
     background-color: rgb(255, 255, 255);
 }
 
-.headerContainer a {
+.tabletHeaderContainer a {
     text-decoration: none;
     color: white;
 }
 
-.leftHeader {
+.tabletLeftHeader {
     display: flex;
     align-items: center;
     padding-left: 4vw;
-    width: 55%;
-}
-
-.lineHeader {
-    width: 40%;
-    left: 10%;
-    height: 0.1vh;
-    background-color: #4a4b55;
-    position: absolute;
-    z-index: 1;
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Assets from "../assets/Assets";
 import Header from "../Components/Header/Header";
 import MobileHeader from "../Components/Mobile_Header/MobileHeader";
+import TabletHeader from "../Components/Tablet_Header/TabletHeader";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Dest() {
@@ -58,61 +59,71 @@ export default function Dest() {
             <div className="headerMobile">
                 <MobileHeader />
             </div>
-            <h1 className="allTitle"><span className="titleSpan">01</span> PICK YOUR DESTINATION</h1>
-            <div className="planetContainer">
-                <div className="planetImg">
-                    <AnimatePresence mode="wait">
-                        <motion.img
-                            key={`planet-${selectedPlanet}`}
-                            src={planets[selectedPlanet].image}
-                            alt={planets[selectedPlanet].name}
-                            initial={{ opacity: 0.4 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        />
-                    </AnimatePresence>
-                </div>
-                <div className="planetTxt active">
-                    <div className="planetHeader">
-                        {Object.keys(planets).map((planet) => (
-                            <div className="headerLink" key={planet}>
-                                <p
-                                    onClick={() => setSelectedPlanet(planet)}
-                                    className={selectedPlanet === planet ? "active" : ""}
-                                >
-                                    {planets[planet].name}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={`planet-${selectedPlanet}`}
-                            initial={{ opacity: 0.4 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <h2>{planets[selectedPlanet].name}</h2>
-                            <div className="planetAbout">
-                                <p id="txt18">{planets[selectedPlanet].about}</p>
-                            </div>
-                            <div className="borderPlanet"></div>
-                            <div className="planetInfo">
-                                <div className="planetsDistance">
-                                    <p>AVG. DISTANCE</p>
-                                    <h3>{planets[selectedPlanet].distance}</h3>
-                                </div>
-                                <div className="planetsTimeTravel">
-                                    <p>Est. travel time</p>
-                                    <h3>{planets[selectedPlanet].travel_time}</h3>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
+            <div className="tabletHeader">
+                <TabletHeader />
             </div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <h1 className="allTitle"><span className="titleSpan">01</span> PICK YOUR DESTINATION</h1>
+                <h1 ></h1>
+                <div className="planetContainer">
+                    <div className="planetImg">
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={`planet-${selectedPlanet}`}
+                                src={planets[selectedPlanet].image}
+                                alt={planets[selectedPlanet].name}
+                                initial={{ opacity: 0.4 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                            />
+                        </AnimatePresence>
+                    </div>
+                    <div className="planetTxt active">
+                        <div className="planetHeader">
+                            {Object.keys(planets).map((planet) => (
+                                <div className="headerLink" key={planet}>
+                                    <p
+                                        onClick={() => setSelectedPlanet(planet)}
+                                        className={selectedPlanet === planet ? "active" : ""}
+                                    >
+                                        {planets[planet].name}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={`planet-${selectedPlanet}`}
+                                initial={{ opacity: 0.4 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <h2>{planets[selectedPlanet].name}</h2>
+                                <div className="planetAbout">
+                                    <p id="txt18">{planets[selectedPlanet].about}</p>
+                                </div>
+                                <div className="borderPlanet"></div>
+                                <div className="planetInfo">
+                                    <div className="planetsDistance">
+                                        <p>AVG. DISTANCE</p>
+                                        <h3>{planets[selectedPlanet].distance}</h3>
+                                    </div>
+                                    <div className="planetsTimeTravel">
+                                        <p>Est. travel time</p>
+                                        <h3>{planets[selectedPlanet].travel_time}</h3>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </motion.div>
         </section>
     )
 }

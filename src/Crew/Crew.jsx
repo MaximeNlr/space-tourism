@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Assets from "../assets/Assets";
 import Header from "../Components/Header/Header";
 import MobileHeader from "../Components/Mobile_Header/MobileHeader";
+import TabletHeader from "../Components/Tablet_Header/TabletHeader";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Crew() {
@@ -58,49 +60,58 @@ export default function Crew() {
             <div className="headerMobile">
                 <MobileHeader />
             </div>
-            <h1 className="allTitle"><span className="titleSpan">02</span> MEET YOUR CREW</h1>
-            <div className="membersContainer">
-                <div className="memberTxt">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={`member-${selectedMember}`}
-                            initial={{ opacity: 0.4 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <h2>{members[selectedMember].role}</h2>
-                            <h3>{members[selectedMember].name}</h3>
-                            <p id="txt18">{members[selectedMember].about}</p>
-                        </motion.div>
-                    </AnimatePresence>
-                    <div className="crewNav">
-                        {Object.keys(members).map((member) => (
-                            <div
-                                className={`memberLink ${selectedMember === member ? "active" : ""}`}
-                                key={member}
-                                onClick={() => setSelectedMember(member)}
+            <div className="tabletHeader">
+                <TabletHeader />
+            </div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <h1 className="allTitle"><span className="titleSpan">02</span> MEET YOUR CREW</h1>
+                <div className="membersContainer">
+                    <div className="memberTxt">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={`member-${selectedMember}`}
+                                initial={{ opacity: 0.4 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
                             >
-                                {members[member].nav}
-                            </div>
-                        ))}
+                                <h2>{members[selectedMember].role}</h2>
+                                <h3>{members[selectedMember].name}</h3>
+                                <p id="txt18">{members[selectedMember].about}</p>
+                            </motion.div>
+                        </AnimatePresence>
+                        <div className="crewNav">
+                            {Object.keys(members).map((member) => (
+                                <div
+                                    className={`memberLink ${selectedMember === member ? "active" : ""}`}
+                                    key={member}
+                                    onClick={() => setSelectedMember(member)}
+                                >
+                                    {members[member].nav}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="crewImg">
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={`member-${selectedMember}`}
+                                src={members[selectedMember].image}
+                                alt={members[selectedMember].name}
+                                initial={{ opacity: 0.4 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                            </motion.img>
+                        </AnimatePresence>
                     </div>
                 </div>
-                <div className="crewImg">
-                    <AnimatePresence mode="wait">
-                        <motion.img
-                            key={`member-${selectedMember}`}
-                            src={members[selectedMember].image}
-                            alt={members[selectedMember].name}
-                            initial={{ opacity: 0.4 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                        </motion.img>
-                    </AnimatePresence>
-                </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
