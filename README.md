@@ -6,8 +6,6 @@ Solution au défi [Space Tourism](https://www.frontendmentor.io/challenges/space
 
 Site multi-pages responsive sur le thème du tourisme spatial : accueil, destinations, équipage, technologies.
 
-👉 [Voir le dépôt GitHub](https://github.com/MaximeNlr/Space-Tourism-Frontend-Mentor)
-
 ## 🛠️ Stack
 
 - React (Vite)
