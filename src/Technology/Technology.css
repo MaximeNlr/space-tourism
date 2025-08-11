@@ -87,6 +87,8 @@
         flex-direction: column-reverse;
         margin: 0;
         text-align: center;
+        padding-bottom: 15vh;
+        padding-top: 5vh;
     }
 
     .techNav {

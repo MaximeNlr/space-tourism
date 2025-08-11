@@ -1,5 +1,5 @@
 import "../Destination/Dest.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Assets from "../assets/Assets";
 import Header from "../Components/Header/Header";
 import MobileHeader from "../Components/Mobile_Header/MobileHeader";
@@ -62,13 +62,17 @@ export default function Dest() {
             <div className="tabletHeader">
                 <TabletHeader />
             </div>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                <h1 className="allTitle"><span className="titleSpan">01</span> PICK YOUR DESTINATION</h1>
-                <h1 ></h1>
+            <div>
+                <motion.h1
+                    initial={{ x: -700 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="allTitle">
+                    <span className="titleSpan">
+                        01
+                    </span>
+                    PICK YOUR DESTINATION
+                </motion.h1>
                 <div className="planetContainer">
                     <div className="planetImg">
                         <AnimatePresence mode="wait">
@@ -103,6 +107,7 @@ export default function Dest() {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
+                                className="planet-info-container"
                             >
                                 <h2>{planets[selectedPlanet].name}</h2>
                                 <div className="planetAbout">
@@ -123,7 +128,7 @@ export default function Dest() {
                         </AnimatePresence>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     )
 }

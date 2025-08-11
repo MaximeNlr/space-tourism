@@ -6,7 +6,7 @@
     align-items: center;
     padding-top: 5vh;
     font-family: "Barlow Condensed", serif;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 2px;
 }
 
@@ -34,7 +34,7 @@
     content: "";
     position: absolute;
     left: 0;
-    bottom: -1.8vh;
+    bottom: -2.1vh;
     width: 100%;
     height: 2px;
     background-color: rgb(255, 255, 255);

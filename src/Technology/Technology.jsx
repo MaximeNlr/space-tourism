@@ -69,12 +69,17 @@ export default function Technology() {
             <div className="tabletHeader">
                 <TabletHeader />
             </div>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                <h1 className="allTitle"><span className="titleSpan">03</span> SPACE LAUNCH 101</h1>
+            <div>
+                <motion.h1
+                    initial={{ x: -700 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="allTitle">
+                    <span className="titleSpan">
+                        03
+                    </span>
+                    SPACE LAUNCH 101
+                </motion.h1>
                 <div className="techContainer">
                     <div className="techNav">
                         <div className="navTechno">
@@ -119,7 +124,7 @@ export default function Technology() {
                         </AnimatePresence>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section >
     )
 }

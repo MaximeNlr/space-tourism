@@ -11,7 +11,6 @@ export default function Home() {
 
     return (
         <section className="homeContainer">
-
             <div className="normalHeader">
                 <Header />
             </div>

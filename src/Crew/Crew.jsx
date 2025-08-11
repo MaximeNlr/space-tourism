@@ -63,12 +63,17 @@ export default function Crew() {
             <div className="tabletHeader">
                 <TabletHeader />
             </div>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                <h1 className="allTitle"><span className="titleSpan">02</span> MEET YOUR CREW</h1>
+            <div>
+                <motion.h1
+                    initial={{ x: -700 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    className="allTitle">
+                    <span className="titleSpan">
+                        02
+                    </span>
+                    MEET YOUR CREW
+                </motion.h1>
                 <div className="membersContainer">
                     <div className="memberTxt">
                         <AnimatePresence mode="wait">
@@ -111,7 +116,7 @@ export default function Crew() {
                         </AnimatePresence>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
     )
 }
