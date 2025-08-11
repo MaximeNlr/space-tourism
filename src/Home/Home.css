@@ -75,6 +75,8 @@
 
     .homeContainer {
         background-image: url(../assets/home/background-home-mobile.jpg);
+        height: 100%;
+        padding-bottom: 20vh;
     }
 
     .spaceContainer {

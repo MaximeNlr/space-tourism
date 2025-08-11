@@ -86,7 +86,7 @@ export default function Crew() {
                             >
                                 <h2>{members[selectedMember].role}</h2>
                                 <h3>{members[selectedMember].name}</h3>
-                                <p id="txt18">{members[selectedMember].about}</p>
+                                <p id="txt18" className="crew-txt">{members[selectedMember].about}</p>
                             </motion.div>
                         </AnimatePresence>
                         <div className="crewNav">
